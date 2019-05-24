@@ -1,0 +1,33 @@
+*Express é um framework Back-end que pode ser comparado com o Laravel para PHP
+*Handlebars é um motor de template para JS
+*body-parser converte os dados de uma requisição 
+*flash é um tipo de sessão que só aparece uma vez, quando uso ele nas mensagens de erro depois de um determinado tempo elas somem sozinhas
+
+#A serem instalados...
+    npm install --save express
+    npm install --save express-handlebars
+    npm install body-parser --save 
+    npm install --save mongoose
+    npm install --save express-session
+    npm install --save connect-flash
+    npm install --save bcryptjs (para criar a senha resh)
+    npm install --g nedemon (conferir se é isso)
+    npm install --save passport (para verificar a senha na hora do acesso, depois olhar o site como usar o passport para autenticação com contas do google)
+    npm install --save passport-local (por que quero autenticar do meu próprio banco local)
+    instalar o git-scm.com
+    instalar o Heroku CLI
+
+#Montando o esqueleto da aplicação...
+    Crio o arquivo 'app.js'
+    Crio a pasta 'models'
+    Crio a pasta 'routes'
+    Crio a pasta 'views' e dentro da pasta de views crio a pasta 'layouts' e dentro de layouts crio o arquivo 'main.handlebars'
+    
+#para hospedar na heroku
+
+    npm init = cria o packege.json que a heroku usa parta verificar quais deoendencias o projeto tem
+
+    .gitignore = este arquivo serve para impedir que certos diretórios entrem no meu versionamento
+    (nome_modules esta pasta não vai subir para a nuvem, ela é ignorada)
+
+    PARA GERAR O PACOTE PRONTO PARA ENVIAR A HEROKU OLHAR O VIDEO (https://www.youtube.com/watch?v=OVsvdeG_AZc&list=PLJ_KhUnlXUPtbtLwaxxUxHqvcNQndmI4B&index=63)

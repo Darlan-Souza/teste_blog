@@ -1,0 +1,23 @@
+<!--PARA CADA ERRO ELE IRÁ PRINTAR O VALOR DE TEXTO DO ERRO que está salvo em 'routes->admin' -->
+{{#each erros}}
+<div class="alert alert-danger">
+    {{texto}}
+</div>
+{{else}}
+{{/each}}
+
+<h3>Editar Categoria</h3>
+<div class="card">
+    <div class="card-body">
+        <form method="POST" action="/admin/categorias/edit">
+            <input type="hidden" name="id" value="{{categoria.id}}">
+            <label for="nome">Nome: </label>
+            <!--value="{{categoria.nome}}" faz com que o que estava no banco seja exibido no formulário-->
+            <input class="form-control" type="text" id="nome" name="nome" placeholder="Nome da categoria" value="{{categoria.nome}}">
+            <label for="nome">Slug: </label>
+            <input class="form-control" type="text" id="slug" name="slug" placeholder="Slug da categoria" value="{{categoria.slug}}">
+            <br>
+            <button type="submit" class="btn btn-success">Editar categoria</button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+<h2>Lista de categorias</h2>
+<hr>
+<a href="/admin/categorias/add"><button class="btn btn-success">Nova Categoria</button></a>
+
+<!--PARA CADA CATEGORIA SALVA NO BANCO ESSA PARTE SERÁ RESPONSÁVEL POR PRINTAR UM CARD NA TELA-->
+{{#each categorias}}
+<!--mt-4 é uma classe responsável por criar uma margem entre um card e outro-->
+<div class="card mt-4">
+    <div class="card-body">
+        <h4>{{nome}}</h4>
+        <small>Slug: {{slug}}</small>
+        <br>
+        <small>Data de criação: {{date}}</small><br>
+        <!--Para pegar o id da categoria dinamicamente faço {{_id}}-->
+        <a href="/admin/categorias/edit/{{_id}}"><button class="btn btn-success mt-4">Editar categoria</button></a>
+        <!--Excluindo categorias-->
+        <form action="/admin/categorias/deletar" method="POST">
+            <input type="hidden" name="id" value="{{_id}}">
+            <button type="submit" class="btn btn-danger mt-2">Deletar categoria</button>
+        </form>
+    </div>
+</div>
+{{else}}
+    <!--Caso não existam categorias-->
+    <h4 class="mt-3">Nunhuma categoria registrada</h4>
+{{/each}}

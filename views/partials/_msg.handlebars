@@ -1,0 +1,12 @@
+<!--Se existir uma msg de sucesso-->
+{{#if success_msg}}
+    <div class="alert alert-success">{{success_msg}}</div>
+{{/if}}
+
+<!--Se existir uma msg de erro-->
+{{#if error_msg}}
+    <div class="alert alert-danger">{{error_msg}}</div>
+{{/if}}
+
+<!--AS VARIÁVEIS success_msg, error_msg VEM DO REGISTRO DE VARIÁVEIS GLOBAIS NO ARQUIVO app.js-->
+
